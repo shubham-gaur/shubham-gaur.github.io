@@ -18,7 +18,7 @@ h4,
 h5,
 h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 550;
 }
 
 .topnav {
@@ -44,6 +44,7 @@ h6 {
     position: relative;
     padding-top: 10%;
     padding-bottom: 5%;
+
 }
 
 .intro-message > h1 {
@@ -181,4 +182,6 @@ p.copyright {
 	text-shadow: 2px 2px 3px rgba(1,1,1,1);
     color:white;
     text-align: justify;
+    letter-spacing: 1.3px;
+    align-items: center;
 }
