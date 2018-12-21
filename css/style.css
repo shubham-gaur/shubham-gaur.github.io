@@ -585,210 +585,6 @@ a:before, a:after {
   background: #f2f2f2;
 }
 
-/* ==========================================================================
-   Pricing Tables
-   ========================================================================== */
-
-.pricing-option {
-  padding-bottom: 40px;
-}
-
-.pricing-option .pricing-top {
-  position: relative;
-  background: #222;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  padding: 40px 20px 30px 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.pricing-option .pricing-top .special-label {
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #1abc9c;
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 3px 0;
-}
-
-.special .pricing-top {
-  background: black;
-}
-
-.pricing-option .pricing-edition {
-  text-transform: uppercase;
-  display: block;
-  font-size: 25px;
-  letter-spacing: 8px;
-}
-
-.pricing-option .price {
-  display: inline-block;
-  position: relative;
-}
-
-.pricing-option .price sup {
-  position: absolute;
-  top: 50px;
-  left: -10px;
-  font-size: 24px;
-}
-
-.pricing-option .price .price-amount {
-  font-size: 108px;
-  letter-spacing: -4px;
-}
-
-.pricing-option .price small {
-  position: relative;
-  left: -10px;
-  font-size: 18px;
-}
-
-.pricing-option ul {
-  list-style: none;
-  margin: 0;
-  background: #eee;
-  text-align: center;
-  padding-left: 0px;
-}
-
-.pricing-option ul li {
-  border-bottom: solid 1px #e1e1e1;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.pricing-option .pricing-signup {
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 15px 10px;
-  color: white;
-  background: #1abc9c;
-}
-
-.pricing-option .pricing-signup:hover {
-  background: #c0392b;
-}
-
-/* Contact Form */
-
-.contact-form {
-  padding-bottom: 30px;
-}
-
-.contact-form label {
-   color: #999;
-}
-
-.contact-form input, .contact-form textarea {
-  padding: 10px 12px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  height: auto;
-}
-
-.contact-form .form-send {
-  text-align: center;
-}
-
-.contact-form .form-send button  {
-  background: #1abc9c;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
-.contact-form .form-send button:hover {
-  background: #1ee3bc;
-}
-
-.contact-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact-form .loading {
-  display: none;
-  color: #555;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-  margin: 15px 0;
-}
-
-.contact-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.contact-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px 0;
-}
-
-.contact-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px 0;
-}
-
-
 /* Copyrights */
 
 #copyrights {
@@ -826,6 +622,8 @@ a:before, a:after {
   .header {
     background-attachment: scroll;
   }
+  /* Caption Style */
+
 }
 
 @media screen and (max-width:769px) {
@@ -837,4 +635,35 @@ a:before, a:after {
     font-size: 25px;
     line-height: 30px;
   }
+
+
+
+.mask figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+
+.mask figcaption {
+  height: 50px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0.8;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.mask figcaption a {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 30px;
+}
 }
