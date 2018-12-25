@@ -103,9 +103,18 @@ body {
   background: #2b2b2b;
 }
 
+.modal-body ol li{
+  color: #2c2d2c !important;
+  font-weight: 500;
+}
+
 .navbar-default {
   border-color: transparent;
   background-color: #dadada;
+}
+
+.navbar-default .navbar-fixed-top{
+
 }
 
 .navbar-toggle {
@@ -121,6 +130,11 @@ body {
 .navbar-default li.active a {
   background-color: #16a085 !important;
   color: #fff !important;
+}
+
+.navbar-default li a {
+  color: #2c2d2c !important;
+  font-weight: 500;
 }
 
 hr {
