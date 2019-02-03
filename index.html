@@ -716,6 +716,53 @@
         <br>
       </div>
       <!-- col -->
+      <div class="col-lg-4">
+        <img src="img/extra/mail-box.jpg" height="400em" width="370em">
+      </div>
+      <div class="col-lg-5">
+        <h3 style="text-align: center;">Contact Form</h3>
+        <form class="contact-form gform" role="form" action="https://script.google.com/macros/s/AKfycbxC7DIznlPmyAeTx6dM3t0lHJLpQTa8EYJGpq32eqPh8c3Rmo2Q/exec" method="POST">
+         <div class="form-elements">
+          <div class="form-group">
+            <input type="name" name="name" class="form-control" id="name" required placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" id="contact-email" required placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+            <span class="email-invalid" style="display:none;color: red">Must be a valid email address</span>
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" class="form-control" id="contact-subject" required placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+            <div class="validate"></div>
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-control" name="message" id="contact-message" required placeholder="Your Message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+            <div class="validate"></div>
+          </div>
+
+          <center>
+            <button  type="submit" class="btn btn-success btn-large">Send Message</button>
+          </center>
+          
+         </div>
+         
+         <!-- Customise the Thankyou Message People See when they submit the form: -->
+         <div class="thankyou_message" style="display:none;">
+          <img src="img/extra/thanks.jpg" height="175em" width="420em">
+          <h3 style="text-align: center;"><strong>Delivered !!!</strong></h3>
+          <center>Will catch up soon...</center>
+          <br>
+          <br>
+          <br>
+          <br> 
+         </div>
+        
+        </form>
+      </div>
+      <!-- col -->
+
     </div>
     <!-- row -->
   </div>
@@ -739,6 +786,8 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" src="js/form-submission-handler.js"></script>
 
 </body>
 </html>
