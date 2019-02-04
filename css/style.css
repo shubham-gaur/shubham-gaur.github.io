@@ -23,6 +23,9 @@ body {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
+::-webkit-scrollbar { 
+display: none; 
+}
 
 ::-moz-selection {
   background: #f2c2c9;
@@ -71,7 +74,7 @@ textarea {
 
 html, body {
   height: 100%;
-   width: 100%;
+   width: 100vw;
    
 }
 
@@ -80,8 +83,6 @@ body {
   font-weight: 300;
   font-size: 16px;
   color: #555;
-  overflow-x:hidden;
-   overflow-y: overlay;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }
