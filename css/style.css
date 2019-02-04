@@ -23,9 +23,6 @@ body {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-::-webkit-scrollbar { 
-display: none; 
-}
 
 ::-moz-selection {
   background: #f2c2c9;
