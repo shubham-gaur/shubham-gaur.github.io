@@ -521,7 +521,7 @@ a:before, a:after {
 /* Caption Style */
 
 .mask figure {
-  overflow: hidden;
+  overflow: overlay;
 }
 
 .mask figure img {
@@ -564,7 +564,7 @@ a:before, a:after {
 }
 
 .mask figcaption a {
-  position: relative;
+  position: absolute;
   top: 10px;
   bottom: 10px;
   right: 30px;
