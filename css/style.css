@@ -72,7 +72,7 @@ textarea {
 html, body {
   height: 100%;
    width: 100%;
-   float: right;
+   
 }
 
 body {
@@ -80,6 +80,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   color: #555;
+  overflow-x:hidden;
+   overflow-y: overlay;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }
