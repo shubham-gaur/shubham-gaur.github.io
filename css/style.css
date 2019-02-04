@@ -485,7 +485,7 @@ a:before, a:after {
 .grid figure img {
   width: 100%;
   display: block;
-  position: relative;
+  position: absolute;
 }
 
 .grid figcaption {
@@ -521,7 +521,7 @@ a:before, a:after {
 /* Caption Style */
 
 .mask figure {
-  overflow: overlay;
+  overflow: hidden;
 }
 
 .mask figure img {
