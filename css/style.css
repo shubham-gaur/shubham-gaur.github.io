@@ -531,10 +531,7 @@ a:before, a:after {
 }
 
 .no-touch .mask figure:hover img, .mask figure.cs-hover img {
-  -webkit-transform: translateY(-30px);
-  -moz-transform: translateY(-30px);
-  -ms-transform: translateY(-30px);
-  transform: translateY(-30px);
+
 }
 
 .mask figcaption {
