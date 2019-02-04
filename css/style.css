@@ -23,13 +23,6 @@ body {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
 ::-moz-selection {
   background: #f2c2c9;
   color: #a4003a;
@@ -76,8 +69,7 @@ textarea {
    ========================================================================== */
 
 html, body {
-  overflow: scroll;
-  overflow-x: hidden;
+   height:100%;
 }
 
 body {
