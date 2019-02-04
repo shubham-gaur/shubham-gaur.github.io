@@ -75,7 +75,7 @@ textarea {
 html, body {
   height: 100%;
  width: auto!important; 
- overflow-x: hidden!important 
+ overflow: scroll;
 }
 
 body {
