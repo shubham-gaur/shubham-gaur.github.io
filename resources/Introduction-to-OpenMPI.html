@@ -13116,14 +13116,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h1 id="Introduction-To-OpenMPI"><center>Introduction To OpenMPI</center><a class="anchor-link" href="#Introduction-To-OpenMPI">&#182;</a></h1><center> 
+<blockquote><h1 id="Introduction-To-OpenMPI"><center>Introduction To OpenMPI</center><a class="anchor-link" href="#Introduction-To-OpenMPI">&#182;</a></h1>
 </blockquote>
+<center> 
 
-<pre><code>Drafted by: SHUBHAM GAUR
-Date: 07/02/2019
-</code></pre>
-<p>&lt;/center&gt;</p>
-
+    Drafted by: SHUBHAM GAUR
+    Date: 07/02/2019
+</center>
 </div>
 </div>
 </div>
@@ -13140,7 +13139,7 @@ Date: 07/02/2019
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="Installing-OpenMPI">Installing OpenMPI<a class="anchor-link" href="#Installing-OpenMPI">&#182;</a></h2><blockquote><h4 id="Hard-And-Fast">Hard And Fast<a class="anchor-link" href="#Hard-And-Fast">&#182;</a></h4>
+<blockquote><h1 id="UNIX-Installation"><center>UNIX Installation</center><a class="anchor-link" href="#UNIX-Installation">&#182;</a></h1><h2 id="Installing-OpenMPI">Installing OpenMPI<a class="anchor-link" href="#Installing-OpenMPI">&#182;</a></h2><blockquote><h4 id="Hard-And-Fast">Hard And Fast<a class="anchor-link" href="#Hard-And-Fast">&#182;</a></h4>
 <pre><code>    sudo apt-install libopenmpi-dec</code></pre>
 <h4 id="Alternative">Alternative<a class="anchor-link" href="#Alternative">&#182;</a></h4><ol>
 <li>Create OpenMPI Folder
@@ -13161,26 +13160,10 @@ Date: 07/02/2019
 </li>
 </ol>
 </blockquote>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="Environment-Setup">Environment Setup<a class="anchor-link" href="#Environment-Setup">&#182;</a></h2>
+<h2 id="Environment-Setup">Environment Setup<a class="anchor-link" href="#Environment-Setup">&#182;</a></h2>
 <pre><code>    export PATH=$PATH:$HOME/openmpi/bin
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/openmpi/lib</code></pre>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h4 id="Create-file">Create file<a class="anchor-link" href="#Create-file">&#182;</a></h4>
+<h4 id="Create-file">Create file<a class="anchor-link" href="#Create-file">&#182;</a></h4>
 <pre><code>    gedit helloworld.c</code></pre>
 <h4 id="Source-Code">Source Code<a class="anchor-link" href="#Source-Code">&#182;</a></h4>
 </blockquote>
@@ -13212,6 +13195,11 @@ Date: 07/02/2019
         <span class="n">MPI_Finalize</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>
+<blockquote><h2 id="Compiling-MPI-Program">Compiling MPI Program<a class="anchor-link" href="#Compiling-MPI-Program">&#182;</a></h2>
+<pre><code>    mpicc -o helloworld helloworld.c</code></pre>
+<h2 id="Running-MPI-Program">Running MPI Program<a class="anchor-link" href="#Running-MPI-Program">&#182;</a></h2>
+<pre><code>    mpirun -np 5 helloworld</code></pre>
+</blockquote>
 
 </div>
 </div>
@@ -13219,10 +13207,7 @@ Date: 07/02/2019
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="Compiling-MPI-Program">Compiling MPI Program<a class="anchor-link" href="#Compiling-MPI-Program">&#182;</a></h2>
-<pre><code>    mpicc -o helloworld helloworld.c</code></pre>
-<h2 id="Running-MPI-Program">Running MPI Program<a class="anchor-link" href="#Running-MPI-Program">&#182;</a></h2>
-<pre><code>    mpirun -np 5 helloworld</code></pre>
+<blockquote><h1 id="WINDOWS-Installation"><center>WINDOWS Installation</center><a class="anchor-link" href="#WINDOWS-Installation">&#182;</a></h1>
 </blockquote>
 
 </div>
