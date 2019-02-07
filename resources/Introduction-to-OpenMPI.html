@@ -13116,23 +13116,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h1 id="-Introduction-to-OpenMPI"><center> Introduction to OpenMPI</center><a class="anchor-link" href="#-Introduction-to-OpenMPI">&#182;</a></h1>
+<blockquote><h1 id="Introduction-To-OpenMPI"><center>Introduction To OpenMPI</center><a class="anchor-link" href="#Introduction-To-OpenMPI">&#182;</a></h1><center> 
 </blockquote>
-<center> 
 
-    Drafted by: SHUBHAM GAUR
-    Date: 07/02/2019
-</center>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="Abstract"><center>Abstract</center><a class="anchor-link" href="#Abstract">&#182;</a></h2>
-<pre><code>    The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. Open MPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available. Basic instructions for installation has been provided in this tutorial. Demo implementation has been given using "helloworld.c" program.
-`</code></pre>
-</blockquote>
+<pre><code>Drafted by: SHUBHAM GAUR
+Date: 07/02/2019
+</code></pre>
+<p>&lt;/center&gt;</p>
 
 </div>
 </div>
@@ -13140,43 +13130,37 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="Installation-Instructions">Installation Instructions<a class="anchor-link" href="#Installation-Instructions">&#182;</a></h2><ol>
-<li>Create a directory for OpenMPI.<div class="highlight"><pre><span></span><span class="nx">mkdir</span> <span class="o">~/</span><span class="nx">openmpi</span>
- <span class="nx">cd</span> <span class="o">~/</span><span class="nx">openmpi</span>
-</pre></div>
+<blockquote><h1 id="Abstract"><center>Abstract</center><a class="anchor-link" href="#Abstract">&#182;</a></h1>
+<pre><code>The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. Open MPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available. Basic instructions for installation has been provided in this tutorial. Demo implementation has been given using "helloworld.c" program.</code></pre>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><h2 id="Installing-OpenMPI">Installing OpenMPI<a class="anchor-link" href="#Installing-OpenMPI">&#182;</a></h2><blockquote><h4 id="Hard-And-Fast">Hard And Fast<a class="anchor-link" href="#Hard-And-Fast">&#182;</a></h4>
+<pre><code>    sudo apt-install libopenmpi-dec</code></pre>
+<h4 id="Alternative">Alternative<a class="anchor-link" href="#Alternative">&#182;</a></h4><ol>
+<li>Create OpenMPI Folder
+<pre><code> mkdir ~/openmp
+ cd ~/openmp</code></pre>
 </li>
-<li>Download <a href="https://www.open-mpi.org/software/ompi/v4.0/">openmpi-4.0.0.tar.gz</a> and move the contents to the newly created folder.<div class="highlight"><pre><span></span><span class="nx">cp</span> <span class="o">~/</span><span class="nx">Downloads</span><span class="sr">/openmpi-4.0.0.tar.gz ~/</span><span class="nx">openmpi</span>
-</pre></div>
+<li>Download latest Version of <a href="https://www.open-mpi.org/software/ompi/v4.0/">OpenMPI-4.0.0.tar.gz</a>.</li>
+<li>Extract the contents and go into extracted directory.
+<pre><code>tar -xzvf openmpi-4.0.0.tar.gz
+ cd openmpi-4.0.0</code></pre>
 </li>
-<li>Extract the contents and go into extracted directory.<div class="highlight"><pre><span></span><span class="nx">tar</span> <span class="o">-</span><span class="nx">xzvf</span> <span class="nx">openmpi</span><span class="o">-</span><span class="mf">4.0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="nx">tar</span><span class="p">.</span><span class="nx">gz</span>
- <span class="nx">cd</span> <span class="nx">openmpi</span><span class="o">-</span><span class="mf">4.0</span><span class="p">.</span><span class="mi">0</span>
-</pre></div>
+<li>Configure and Compile
+<pre><code> ./configure --prefix = ~/openmpi
+ make all</code></pre>
 </li>
-<li>Configure and Compile the libraries. (<em>any one</em>)   <ul>
-<li>GCC Configuration<div class="highlight"><pre><span></span><span class="p">.</span><span class="sr">/configure -prefix = ~/</span><span class="nx">openmpi</span> <span class="nx">CXX</span><span class="o">=</span><span class="nx">icpc</span> <span class="nx">CC</span><span class="o">=</span><span class="nx">icc</span> <span class="nx">FC</span><span class="o">=</span><span class="nx">ifort</span>
-<span class="nx">make</span> <span class="nx">all</span>
-</pre></div>
-</li>
-<li>G++ Configuration<div class="highlight"><pre><span></span><span class="p">.</span><span class="sr">/configure -prefix = ~/</span><span class="nx">openmpi</span> <span class="nx">CXX</span><span class="o">=</span><span class="nx">g</span><span class="o">++</span> <span class="nx">CC</span><span class="o">=</span><span class="nx">gcc</span> <span class="nx">FC</span><span class="o">=</span><span class="nx">ifort</span>
-<span class="nx">make</span> <span class="nx">all</span>
-</pre></div>
-</li>
-</ul>
-</li>
-<li>Install using the below command.<div class="highlight"><pre><span></span><span class="nx">make</span> <span class="nx">install</span>
-</pre></div>
+<li>Install
+<pre><code> make install</code></pre>
 </li>
 </ol>
-<h2 id="Setting-Up-Environment-Variables">Setting-Up Environment Variables<a class="anchor-link" href="#Setting-Up-Environment-Variables">&#182;</a></h2><ul>
-<li>Edit Bash Source: 
-<code>gedit ~/.bashrc</code></li>
-<li>Add the following lines at the end of script.<div class="highlight"><pre><span></span><span class="nx">export</span> <span class="nx">MPIROOT</span><span class="o">=</span> <span class="o">~/</span><span class="nx">openmpi</span>
-  <span class="nx">export</span> <span class="nx">PATH</span><span class="o">=</span><span class="nx">$MPIROOT</span><span class="o">/</span><span class="nx">bin</span><span class="o">:</span><span class="nx">$PATH</span>
-  <span class="nx">export</span> <span class="nx">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nx">$MPIROOT</span><span class="o">/</span><span class="nx">lib</span><span class="o">:</span><span class="nx">$LD_LIBRARY_PATH</span>
-  <span class="nx">export</span> <span class="nx">MANPATH</span><span class="o">=</span><span class="nx">$MPIROOT</span><span class="sr">/share/m</span><span class="nx">an</span><span class="o">:</span><span class="nx">$MANPATH</span>
-</pre></div>
-</li>
-</ul>
+</blockquote>
 </blockquote>
 
 </div>
@@ -13185,25 +13169,48 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="HELLO-WORLD">HELLO WORLD<a class="anchor-link" href="#HELLO-WORLD">&#182;</a></h2><blockquote><h4 id="Create-Program-File">Create Program File<a class="anchor-link" href="#Create-Program-File">&#182;</a></h4><div class="highlight"><pre><span></span><span class="nx">gedit</span> <span class="nx">helloworld</span><span class="p">.</span><span class="nx">c</span>
-</pre></div>
-<h4 id="Writing-Source">Writing Source<a class="anchor-link" href="#Writing-Source">&#182;</a></h4>
+<blockquote><h2 id="Environment-Setup">Environment Setup<a class="anchor-link" href="#Environment-Setup">&#182;</a></h2>
+<pre><code>    export PATH=$PATH:$HOME/openmpi/bin
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/openmpi/lib</code></pre>
 </blockquote>
-</blockquote>
-<div class="highlight"><pre><span></span><span class="c1">// Libraries</span>
-                <span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-                <span class="cp">#include</span><span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
 
-                <span class="c1">// Main Function</span>
-                <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span> <span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
-                    <span class="kt">int</span> <span class="n">rank</span><span class="p">;</span>
-                    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-                    <span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span>
-                    <span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MOI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">size</span><span class="p">);</span>
-                    <span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
-                    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;MPI Hello World from process %d of %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">rank</span><span class="p">,</span><span class="n">size</span><span class="p">);</span>
-                    <span class="n">MPI_Finalize</span><span class="p">();</span>
-                <span class="p">}</span>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><h4 id="Create-file">Create file<a class="anchor-link" href="#Create-file">&#182;</a></h4>
+<pre><code>    gedit helloworld.c</code></pre>
+<h4 id="Source-Code">Source Code<a class="anchor-link" href="#Source-Code">&#182;</a></h4>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+    <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+    <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Initialize the MPI environment</span>
+        <span class="n">MPI_Init</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+
+        <span class="c1">// Get the number of processes</span>
+        <span class="kt">int</span> <span class="n">world_size</span><span class="p">;</span>
+        <span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">world_size</span><span class="p">);</span>
+
+        <span class="c1">// Get the rank of the process</span>
+        <span class="kt">int</span> <span class="n">world_rank</span><span class="p">;</span>
+        <span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">world_rank</span><span class="p">);</span>
+
+        <span class="c1">// Get the name of the processor</span>
+        <span class="kt">char</span> <span class="n">processor_name</span><span class="p">[</span><span class="n">MPI_MAX_PROCESSOR_NAME</span><span class="p">];</span>
+        <span class="kt">int</span> <span class="n">name_len</span><span class="p">;</span>
+        <span class="n">MPI_Get_processor_name</span><span class="p">(</span><span class="n">processor_name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">name_len</span><span class="p">);</span>
+
+        <span class="c1">// Print off a hello world message</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world from processor %s, rank %d out of %d processors</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+               <span class="n">processor_name</span><span class="p">,</span> <span class="n">world_rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">);</span>
+
+        <span class="c1">// Finalize the MPI environment.</span>
+        <span class="n">MPI_Finalize</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 
 </div>
@@ -13212,10 +13219,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="Compiling-Code">Compiling Code<a class="anchor-link" href="#Compiling-Code">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nx">mpicc</span> <span class="o">-</span><span class="nx">o</span> <span class="nx">helloworld</span> <span class="nx">helloworld</span><span class="p">.</span><span class="nx">c</span>
-</pre></div>
-<h2 id="Executing-Code">Executing Code<a class="anchor-link" href="#Executing-Code">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nx">mpirun</span> <span class="o">-</span><span class="nx">np</span> <span class="mi">5</span>  <span class="nx">helloworld</span><span class="p">.</span><span class="nx">c</span>
-</pre></div>
+<blockquote><h2 id="Compiling-MPI-Program">Compiling MPI Program<a class="anchor-link" href="#Compiling-MPI-Program">&#182;</a></h2>
+<pre><code>    mpicc -o helloworld helloworld.c</code></pre>
+<h2 id="Running-MPI-Program">Running MPI Program<a class="anchor-link" href="#Running-MPI-Program">&#182;</a></h2>
+<pre><code>    mpirun -np 5 helloworld</code></pre>
 </blockquote>
 
 </div>
