@@ -13117,10 +13117,30 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><h1 id="-Introduction-to-OpenMPI"><center> Introduction to OpenMPI</center><a class="anchor-link" href="#-Introduction-to-OpenMPI">&#182;</a></h1>
-<pre><code>This ksaflmfa;llak
+</blockquote>
+<center> 
 
-</code></pre>
-<h2 id="Installation-Instructions">Installation Instructions<a class="anchor-link" href="#Installation-Instructions">&#182;</a></h2><ol>
+    Drafted by: SHUBHAM GAUR
+    Date: 07/02/2019
+</center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><h2 id="Abstract"><center>Abstract</center><a class="anchor-link" href="#Abstract">&#182;</a></h2>
+<pre><code>    The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. Open MPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available. Basic instructions for installation has been provided in this tutorial. Demo implementation has been given using "helloworld.c" program.
+`</code></pre>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><h2 id="Installation-Instructions">Installation Instructions<a class="anchor-link" href="#Installation-Instructions">&#182;</a></h2><ol>
 <li>Create a directory for OpenMPI.<div class="highlight"><pre><span></span><span class="nx">mkdir</span> <span class="o">~/</span><span class="nx">openmpi</span>
  <span class="nx">cd</span> <span class="o">~/</span><span class="nx">openmpi</span>
 </pre></div>
@@ -13132,14 +13152,70 @@ div#notebook {
  <span class="nx">cd</span> <span class="nx">openmpi</span><span class="o">-</span><span class="mf">4.0</span><span class="p">.</span><span class="mi">0</span>
 </pre></div>
 </li>
-<li>Configure and Compile the libraries.<div class="highlight"><pre><span></span><span class="p">.</span><span class="sr">/configure --prefix~/</span><span class="nx">openmpi</span>
- <span class="nx">make</span> <span class="nx">all</span>
+<li>Configure and Compile the libraries. (<em>any one</em>)   <ul>
+<li>GCC Configuration<div class="highlight"><pre><span></span><span class="p">.</span><span class="sr">/configure -prefix = ~/</span><span class="nx">openmpi</span> <span class="nx">CXX</span><span class="o">=</span><span class="nx">icpc</span> <span class="nx">CC</span><span class="o">=</span><span class="nx">icc</span> <span class="nx">FC</span><span class="o">=</span><span class="nx">ifort</span>
+<span class="nx">make</span> <span class="nx">all</span>
 </pre></div>
+</li>
+<li>G++ Configuration<div class="highlight"><pre><span></span><span class="p">.</span><span class="sr">/configure -prefix = ~/</span><span class="nx">openmpi</span> <span class="nx">CXX</span><span class="o">=</span><span class="nx">g</span><span class="o">++</span> <span class="nx">CC</span><span class="o">=</span><span class="nx">gcc</span> <span class="nx">FC</span><span class="o">=</span><span class="nx">ifort</span>
+<span class="nx">make</span> <span class="nx">all</span>
+</pre></div>
+</li>
+</ul>
 </li>
 <li>Install using the below command.<div class="highlight"><pre><span></span><span class="nx">make</span> <span class="nx">install</span>
 </pre></div>
 </li>
 </ol>
+<h2 id="Setting-Up-Environment-Variables">Setting-Up Environment Variables<a class="anchor-link" href="#Setting-Up-Environment-Variables">&#182;</a></h2><ul>
+<li>Edit Bash Source: 
+<code>gedit ~/.bashrc</code></li>
+<li>Add the following lines at the end of script.<div class="highlight"><pre><span></span><span class="nx">export</span> <span class="nx">MPIROOT</span><span class="o">=</span> <span class="o">~/</span><span class="nx">openmpi</span>
+  <span class="nx">export</span> <span class="nx">PATH</span><span class="o">=</span><span class="nx">$MPIROOT</span><span class="o">/</span><span class="nx">bin</span><span class="o">:</span><span class="nx">$PATH</span>
+  <span class="nx">export</span> <span class="nx">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nx">$MPIROOT</span><span class="o">/</span><span class="nx">lib</span><span class="o">:</span><span class="nx">$LD_LIBRARY_PATH</span>
+  <span class="nx">export</span> <span class="nx">MANPATH</span><span class="o">=</span><span class="nx">$MPIROOT</span><span class="sr">/share/m</span><span class="nx">an</span><span class="o">:</span><span class="nx">$MANPATH</span>
+</pre></div>
+</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><h2 id="HELLO-WORLD">HELLO WORLD<a class="anchor-link" href="#HELLO-WORLD">&#182;</a></h2><blockquote><h4 id="Create-Program-File">Create Program File<a class="anchor-link" href="#Create-Program-File">&#182;</a></h4><div class="highlight"><pre><span></span><span class="nx">gedit</span> <span class="nx">helloworld</span><span class="p">.</span><span class="nx">c</span>
+</pre></div>
+<h4 id="Writing-Source">Writing Source<a class="anchor-link" href="#Writing-Source">&#182;</a></h4>
+</blockquote>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="c1">// Libraries</span>
+                <span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+                <span class="cp">#include</span><span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+
+                <span class="c1">// Main Function</span>
+                <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span> <span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">rank</span><span class="p">;</span>
+                    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+                    <span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span>
+                    <span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MOI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">size</span><span class="p">);</span>
+                    <span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+                    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;MPI Hello World from process %d of %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">rank</span><span class="p">,</span><span class="n">size</span><span class="p">);</span>
+                    <span class="n">MPI_Finalize</span><span class="p">();</span>
+                <span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><h2 id="Compiling-Code">Compiling Code<a class="anchor-link" href="#Compiling-Code">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nx">mpicc</span> <span class="o">-</span><span class="nx">o</span> <span class="nx">helloworld</span> <span class="nx">helloworld</span><span class="p">.</span><span class="nx">c</span>
+</pre></div>
+<h2 id="Executing-Code">Executing Code<a class="anchor-link" href="#Executing-Code">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nx">mpirun</span> <span class="o">-</span><span class="nx">np</span> <span class="mi">5</span>  <span class="nx">helloworld</span><span class="p">.</span><span class="nx">c</span>
+</pre></div>
 </blockquote>
 
 </div>
